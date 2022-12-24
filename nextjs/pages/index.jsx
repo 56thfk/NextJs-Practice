@@ -1,7 +1,30 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import { useState } from 'react'
 
+const App = () => {
+  const [username, setUsername] = useState('')
+
+  return (
+    <div>
+      <label>
+        username
+        <input
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          style={{ marginRight: '12px' }}
+        />
+      </label>
+      <p> 깃허브 검색하기 </p>
+      <Link href={`/users/${username}`}>
+        <a>검색하기</a>
+      </Link>
+    </div>
+  )
+}
+
+export default App
+/*
 const App = () => {
   const [name, setName] = useState('')
   const router = useRouter()
@@ -29,3 +52,4 @@ const App = () => {
 }
 
 export default App
+*/
