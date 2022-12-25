@@ -18,6 +18,7 @@ module.exports = {
   ],
   rules: {
     'react/no-unescaped-entities': 'off',
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'react/no-unknown-property': ['error', { ignore: ['css', 'jsx'] }]
   }
 }

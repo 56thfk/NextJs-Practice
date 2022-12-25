@@ -16,7 +16,7 @@ const App = () => {
         />
       </label>
       <p> 깃허브 검색하기 </p>
-      <Link href={`/user/${username}`}>
+      <Link href={`/users/${username}`}>
         <a>검색하기</a>
       </Link>
       <div>
